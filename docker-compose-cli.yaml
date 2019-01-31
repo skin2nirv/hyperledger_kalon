@@ -17,6 +17,31 @@ networks:
 
 services:
 
+  ca.org1.example.com:
+    container_name: ca.org1.example.com
+    extends:
+      file: docker-compose-e2e.yaml
+      service: ca.org1.example.com
+
+  ca.org2.example.com:
+    container_name: ca.org2.example.com
+    extends:
+      file: docker-compose-e2e.yaml
+      service: ca.org2.example.com
+
+
+  ca.org3.example.com:
+    container_name: ca.org3.example.com
+    extends:
+      file: docker-compose-e2e.yaml
+      service: ca.org3.example.com
+
+  ca.org4.example.com:
+    container_name: ca.org4.example.com
+    extends:
+      file: docker-compose-e2e.yaml
+      service: ca.org4.example.com
+
   orderer.example.com:
     extends:
       file:   base/docker-compose-base.yaml
